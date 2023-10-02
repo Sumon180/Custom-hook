@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.small {
+  background-color: black;
+  color: aliceblue;
+}
+.medium {
+  background-color: chocolate;
+}
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  font-weight: 700;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: italic;
+}
+ul,
+.bar {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 10px 20px;
+}
+ul {
+  background-color: rgb(49, 29, 228);
+  color: #fff;
+}
+.bar {
+  display: block;
+  background-color: aquamarine;
+}
