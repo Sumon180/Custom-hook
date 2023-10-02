@@ -1,4 +1,6 @@
+import { useState } from "react";
 import useWindowWidth from "./hooks/useWindowWidth";
+import useTitleCount from "./hooks/useTitleCount";
 
 const Navbar = () => {
   const screenSize = useWindowWidth(768);
@@ -23,12 +25,19 @@ const Navbar = () => {
 
 function App() {
   const screenSize = useWindowWidth(900);
+  const [count, setCount] = useState(0);
+
+  useTitleCount(count);
 
   return (
     <>
       <Navbar />
       <div className={`${screenSize ? "small" : "medium"} main`}>
-        Hello {screenSize ? "small" : "medium"}
+        <span>{count}</span>
+        <div>Hello {screenSize ? "small" : "medium"}</div>
+        <button className="btn" onClick={() => setCount(count + 1)}>
+          Count 🙂
+        </button>
       </div>
     </>
   );
